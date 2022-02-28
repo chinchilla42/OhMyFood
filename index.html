@@ -3,6 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">    
+        <script src="https://kit.fontawesome.com/04ff72cfaa.js" crossorigin="anonymous"></script>
         <title>ohmyfood</title>
     </head>
     <body>
@@ -16,7 +20,7 @@
                 <section id="location">
                     <form>
                         <div>
-                            <i></i>
+                            <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <input type="test" placeholder="Paris, Belleville">
                         
@@ -30,19 +34,31 @@
                 </section>
                 <section id="howto">
                     <h2>Fonctionnement</h2>
-                    <div>
-
-                    </div>
-
+                    <ol>
+                        <li>
+                            <i class="fas fa-mobile-alt"></i>
+                            <p>choisissez un restaurant</p>
+                        </li>
+                        <li>
+                             <i class="fas fa-list"></i>
+                            <p>Composez votre menu</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-store"></i>
+                            <p>Dégustez au restaurant</p>
+                        </li>
+                    </ol>
                 </section>
                 <section id="restaurants">
+                    <h2>Nos restaurants</h2>
                     <a href>
                         <figure>
                             <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
+                            <span>Nouveau</span>
                             <figcaption>
                                 <h3>La palette du goût</h3>
                                 <p>Ménilmontant</p>
-                                <div><i></i></div>
+                                <i class="fas fa-heart"></i>
                             </figcaption>
                         </figure>
                     </a>
@@ -52,10 +68,10 @@
             <footer>
                 <h4>ohmyfood</h4>
                 <ul>
-                    <li><i></i>Proposer un restaurant</li>
-                    <li><i></i>Devenir partenaire</li>
+                    <li><i class="fas fa-utensils"></i>Proposer un restaurant</li>
+                    <li><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
                     <li>Mentions légales</li>
-                    <li>Contact</li>
+                    <li><a href = "mailto:#">Contact</ahref></li>
                 </ul>
             </footer>
         </div>
