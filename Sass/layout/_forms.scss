@@ -1,0 +1,17 @@
+#location{
+    text-align: center;
+    &__search{
+        display: flex;
+        justify-content: center;
+        background-color: #b5b3b3;
+        padding: 10px;
+    }
+    &__text{
+        background-color: #e8e3e3;
+        padding: 35px;
+    }
+}
+input{
+    border: none;
+    background-color: #b5b3b3;
+}

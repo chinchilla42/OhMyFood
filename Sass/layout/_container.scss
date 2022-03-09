@@ -1,0 +1,18 @@
+$smartphone: 767px;
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    margin: 0px;
+    font-family: $font-main;
+}
+.container{
+    display: flex;
+    @media screen and (max-width: $smartphone){
+        max-width: $smartphone;
+        width:100%;
+    }
+}
