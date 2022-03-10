@@ -92,6 +92,11 @@ button {
   flex-direction: column;
   align-items: center;
 }
+.item__new {
+  background-color: #99E2D0;
+  padding: 5px;
+  margin-bottom: -1px;
+}
 .item__card {
   width: 90%;
   border-radius: 15px;
@@ -109,16 +114,16 @@ button {
   padding: 5px;
 }
 
-#howto {
+.howto {
   padding: 30px 10px;
 }
-#howto__container {
+.howto__container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10px;
 }
-#howto__container__item {
+.howto__container__item {
   background-color: #e8e3e3;
   width: 80%;
   display: flex;
@@ -126,6 +131,15 @@ button {
   justify-content: space-around;
   margin: 5px;
   padding: 15px;
+  border-radius: 15px;
+}
+.howto__container__item__number {
+  margin-left: -40px;
+  background-color: #9356DC;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
 }
 
 .fas {
