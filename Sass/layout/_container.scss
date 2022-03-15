@@ -1,5 +1,3 @@
-$smartphone: 767px;
-
 *{
     margin: 0px;
     padding: 0px;
@@ -9,10 +7,13 @@ body{
     margin: 0px;
     font-family: $font-main;
 }
-.container{
-    display: flex;
+
+#container{
     @media screen and (max-width: $smartphone){
         max-width: $smartphone;
         width:100%;
     }
 }
+#container__restaurant{
+            background-color: $gray-medium;
+        }

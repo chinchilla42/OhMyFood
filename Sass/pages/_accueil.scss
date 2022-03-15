@@ -1,41 +1,44 @@
 .howto{
     padding: 30px 10px;
     &__container{
-        display: flex;
-        flex-direction: column;
+        @include flex;
         align-items: center;
+        justify-content: space-around;
         padding: 10px;
         &__item{
             background-color: #e8e3e3;
-            width: 80%;
+            width: 250px;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            margin: 5px;
+            align-items: baseline;
+            margin: 25px;
             padding: 15px;
             border-radius: 15px;
+            &:hover{
+                background-color: $colo-hover;
+                color: $color-primary;
+            }
             &__number{
-                margin-left: -40px;
+                display: flex;
+                justify-content:center;
+                align-items: center;
+                margin-left: -19%;
                 background-color: $color-primary;
                 border-radius: 50%;
-                width: 20px;
-                height: 20px;
-                text-align: center;
+                width: 30px;
+                height: 30px;
+                color: $white;
             }
         }
     }
 }
-
-.fas{
-    align-self: center;
-}
-
-#restaurants{ 
-    padding-bottom: 20px;
+.restaurants{ 
+    padding: 20px 10px 50px 10px;
+    background-color: $gray-light;
     &__container{
-        display: flex;
-        flex-wrap: wrap;
-        align-content: center;
-
+        @include flex;
+        gap: 15px;
+        justify-content: space-around;
     }
 }

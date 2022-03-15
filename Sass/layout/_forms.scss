@@ -9,9 +9,16 @@
     &__text{
         background-color: #e8e3e3;
         padding: 35px;
+        &__title{
+            font-weight: bolder;
+        }
+        &__p{
+            margin: 20px;
+        }
     }
 }
 input{
     border: none;
     background-color: #b5b3b3;
+    margin-left: 10px;
 }

@@ -8,7 +8,7 @@ h1 {
 }
 
 h2 {
-  margin-left: 5px;
+  margin-bottom: 15px;
 }
 
 h4 {
@@ -30,14 +30,15 @@ body {
   font-family: Roboto;
 }
 
-.container {
-  display: flex;
-}
 @media screen and (max-width: 767px) {
-  .container {
+  #container {
     max-width: 767px;
     width: 100%;
   }
+}
+
+#container__restaurant {
+  background-color: #EAEAEA;
 }
 
 header {
@@ -45,6 +46,12 @@ header {
   justify-content: center;
   padding: 5px;
   border-bottom: solid 2px gray;
+}
+
+#arrow {
+  position: absolute;
+  left: 15px;
+  top: 15px;
 }
 
 #location {
@@ -60,15 +67,22 @@ header {
   background-color: #e8e3e3;
   padding: 35px;
 }
+#location__text__title {
+  font-weight: bolder;
+}
+#location__text__p {
+  margin: 20px;
+}
 
 input {
   border: none;
   background-color: #b5b3b3;
+  margin-left: 10px;
 }
 
 footer {
   padding: 15px;
-  background-color: gray;
+  background-color: #353535;
   color: #fff;
 }
 footer h4 {
@@ -77,14 +91,22 @@ footer h4 {
 footer ul {
   list-style: none;
 }
+footer ul li {
+  padding: 5px;
+}
+footer ul li .fas {
+  width: 30px;
+}
 
 button {
   border-radius: 25px;
   background-color: #FF79DA;
   padding: 12px;
   font-family: inherit;
+  font-weight: bold;
   color: #fff;
   border: none;
+  cursor: pointer;
 }
 
 .item {
@@ -93,25 +115,38 @@ button {
   align-items: center;
 }
 .item__new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  align-self: flex-end;
+  margin: 15px;
+  width: 70px;
+  height: 30px;
+  color: #269E80;
   background-color: #99E2D0;
   padding: 5px;
   margin-bottom: -1px;
 }
 .item__card {
-  width: 90%;
+  width: 300px;
   border-radius: 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .item__card__image {
   width: 100%;
-  height: 150px;
+  height: 170px;
   object-fit: cover;
   border-radius: 15px 15px 0px 0px;
 }
 .item__card__caption {
   display: flex;
   justify-content: space-between;
-  padding: 5px;
+  padding: 10px;
+}
+
+.full {
+  opacity: 0;
 }
 
 .howto {
@@ -119,40 +154,113 @@ button {
 }
 .howto__container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-around;
   padding: 10px;
 }
 .howto__container__item {
   background-color: #e8e3e3;
-  width: 80%;
+  width: 250px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 5px;
+  align-items: baseline;
+  margin: 25px;
   padding: 15px;
   border-radius: 15px;
 }
+.howto__container__item:hover {
+  background-color: #F5EDFF;
+  color: #9356DC;
+}
 .howto__container__item__number {
-  margin-left: -40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -19%;
   background-color: #9356DC;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  text-align: center;
+  width: 30px;
+  height: 30px;
+  color: #fff;
 }
 
-.fas {
-  align-self: center;
+.restaurants {
+  padding: 20px 10px 50px 10px;
+  background-color: #F6F6F6;
 }
-
-#restaurants {
-  padding-bottom: 20px;
-}
-#restaurants__container {
+.restaurants__container {
   display: flex;
   flex-wrap: wrap;
-  align-content: center;
+  gap: 15px;
+  justify-content: space-around;
+}
+
+#photo {
+  width: 100%;
+  object-fit: cover;
+  max-height: 500px;
+}
+
+#title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px;
+  align-items: flex-start;
+}
+.menu__item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  font-size: small;
+}
+.menu__item__title {
+  text-transform: uppercase;
+  font-size: small;
+  padding: 5px;
+  border-color: #F5EDFF;
+}
+.menu__item__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.course {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: stretch;
+  background-color: #fff;
+  width: 300px;
+  border-radius: 15px;
+  padding: 10px;
+}
+.course__description {
+  overflow: hidden;
+}
+.course__price {
+  display: flex;
+  align-items: flex-end;
+}
+
+#order {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 50px 0;
+}
+#order__btn {
+  padding: 10px 30px 10px 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

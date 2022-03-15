@@ -3,6 +3,8 @@ button{
     background-color: $color-secondary;
     padding: 12px;
     font-family: inherit;
+    font-weight: bold;
     color: $white;
     border: none;
+    cursor: pointer;
 }

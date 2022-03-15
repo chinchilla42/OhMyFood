@@ -1,0 +1,59 @@
+#photo{
+    width: 100%;
+    object-fit: cover;
+    max-height: 500px;
+}
+
+#title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.menu{
+    @include flex;
+    gap: 10px;
+    margin: 15px;
+    align-items: flex-start;
+    &__item{
+        @include flex;
+        flex-direction: column;
+        font-size: small;
+        &__title{
+            text-transform: uppercase;
+            font-size: small;
+            padding: 5px;
+            border-color: $colo-hover;
+        }
+        &__container{
+            @include flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+}
+.course{
+    @include flex;
+    flex-direction: row;
+    justify-content: stretch;
+    background-color: $white;
+    width: 300px;
+    border-radius: 15px;
+    padding: 10px;
+    &__description{
+        overflow: hidden;    }
+    &__price{
+        display: flex;
+        align-items: flex-end;
+    }
+}
+
+#order{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 50px 0;
+    &__btn{
+        padding: 10px 30px 10px 30px;
+    }
+}
