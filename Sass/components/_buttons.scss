@@ -1,6 +1,6 @@
 button{
     border-radius: 25px;
-    background-color: $color-secondary;
+    background-image: linear-gradient($color-secondary, $color-primary);
     padding: 12px;
     font-family: inherit;
     font-weight: bold;

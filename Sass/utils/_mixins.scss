@@ -2,3 +2,9 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+@mixin container{
+    margin: auto;
+    min-width: 992px;
+    max-width: 1200px;
+}

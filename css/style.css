@@ -30,6 +30,11 @@ body {
   font-family: Roboto;
 }
 
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
 @media screen and (max-width: 767px) {
   #container {
     max-width: 767px;
@@ -38,6 +43,9 @@ body {
 }
 
 #container__restaurant {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   background-color: #EAEAEA;
 }
 
@@ -49,9 +57,9 @@ header {
 }
 
 #arrow {
-  position: absolute;
-  left: 15px;
-  top: 15px;
+  position: relative;
+  top: 10px;
+  right: 39%;
 }
 
 #location {
@@ -100,7 +108,7 @@ footer ul li .fas {
 
 button {
   border-radius: 25px;
-  background-color: #FF79DA;
+  background-image: linear-gradient(#FF79DA, #9356DC);
   padding: 12px;
   font-family: inherit;
   font-weight: bold;
@@ -215,7 +223,7 @@ button {
   flex-wrap: wrap;
   gap: 10px;
   margin: 15px;
-  align-items: flex-start;
+  justify-content: space-around;
 }
 .menu__item {
   display: flex;
@@ -236,22 +244,53 @@ button {
   gap: 10px;
 }
 
+.underline {
+  content: "";
+  background-color: #99E2D0;
+  width: 40px;
+  height: 3px;
+  position: relative;
+  bottom: 15px;
+  left: 4px;
+}
+
 .course {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: stretch;
+  justify-content: space-between;
   background-color: #fff;
   width: 300px;
+  height: 40px;
   border-radius: 15px;
   padding: 10px;
 }
-.course__description {
+.course__item__description {
   overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 .course__price {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+}
+.course__check {
+  background-color: #99E2D0;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: -65px;
+}
+.course__check__wrap {
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: #99E2D0;
 }
 
 #order {
