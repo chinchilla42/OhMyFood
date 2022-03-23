@@ -114,7 +114,13 @@ button {
   font-weight: bold;
   color: #fff;
   border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+button:hover {
   cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .item {
@@ -154,9 +160,20 @@ button {
 }
 
 .full {
-  opacity: 0;
+  background: linear-gradient(to left, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 1;
 }
 
+/**.loader{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    animation-duration: 2s;
+}**/
 .howto {
   padding: 30px 10px;
 }
@@ -181,6 +198,7 @@ button {
 .howto__container__item:hover {
   background-color: #F5EDFF;
   color: #9356DC;
+  cursor: pointer;
 }
 .howto__container__item__number {
   display: flex;
@@ -264,14 +282,30 @@ button {
   border-radius: 15px;
   padding: 10px;
 }
-.course__item__description {
+.course__item {
+  width: 80%;
+}
+.course__item__description__title {
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
   max-width: 100%;
+  padding: 2px;
+}
+.course__item__description__text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  padding: 2px;
 }
 .course__price {
   display: flex;
+  width: 50px;
+  height: 50px;
   align-items: center;
+  justify-content: flex-end;
+  font-weight: bold;
 }
 .course__check {
   background-color: #99E2D0;
