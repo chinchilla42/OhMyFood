@@ -8,13 +8,14 @@
         justify-content: center;
         position: absolute;
         align-self: flex-end;
+        margin-bottom: -1px;
+        color: $color-text-new;
+        background-color: $color-tertiary;
         margin: 15px;
         width: 70px;
         height: 30px;
-        color: $color-text-new;
-        background-color: $color-tertiary;
         padding: 5px;
-        margin-bottom: -1px;
+        z-index: 0;
     }
     &__card{
         width: 300px;
