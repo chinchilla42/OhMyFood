@@ -53,7 +53,7 @@
 }
 .pink{
     background: linear-gradient(to left, $color-primary, $color-secondary);
-    -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
     opacity: 0;
     font-weight: bold;

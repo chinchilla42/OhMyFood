@@ -1,19 +1,18 @@
 #photo{
     width: 100%;
     object-fit: cover;
-    max-height: 500px;
-    z-index: 1;
-
+    max-height: 400px;
 }
 
 #title{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px;
-    z-index: 2;
+    padding: 20px;
     border-radius: 25px 25px 0 0;
-    background: $gray-medium;
+    background-color: $gray-medium;
+    position: relative;
+    top: -45px;
 }
 
 .menu{
@@ -51,44 +50,54 @@
 }
 
 .course{
-    @include flex;
+    display: flex;
     justify-content: space-between;
+    //align-items: center;
     background-color: $white;
     width: 300px;
     height: 40px;
     border-radius: 15px;
     padding: 10px;
     animation-name: appear;
-    animation-duration: 3s;
-    animation-timing-function: ease-out;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
     animation-fill-mode: both;
+    overflow: hidden;
     &:hover{  
         cursor: pointer;  
     }
-    &:hover > .checked{
+    &:hover > &__check{
         animation: select 2s forwards;
-        .wrap{
-            transition: rotate 2s forwards;
-        }
     }
-    &__item{
+    &:hover > &__price{
+        animation: move 1.5s forwards;
+    }
+    &:hover > &__description{
+        animation: reduce 2s forwards;
+    }
+    &:hover .fas{
+        animation: turn 2s forwards;
+    } 
+    &__description{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
         width: 80%;
-        &__description{
-            &__title{
+        max-width: 300px;
+        &__title{
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
             max-width: 100%;
             padding: 2px;
-            }
+        }
         &__text{
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
             max-width: 100%;
             padding: 2px;
-            }    
-        }
+        }    
     }   
     &__price{
         display: flex;
@@ -99,26 +108,17 @@
         font-weight: bold;
     }
     &__check{
-        background-color: $color-tertiary;
-        height: 60px;
-        width: 60px;
+        background-color: $color-tertiary;;
+        height: 35px;
+        width: 35px;  
         display: flex;
-        opacity: 0;
-        justify-content:center;
-        align-items: center;
-        margin-right: -65px;
+        justify-content: center;
+        align-items: center;  
+        color: $white;
+        padding: 13px 10px;
+        margin-right: -70px;
         margin-top: -10px;
-        //border-radius: 0 15px 15px 0;
-        &__wrap{
-            height: 22px;
-            width: 22px;
-            border-radius: 50%;
-            display: flex;
-            justify-content:center;
-            align-items: center;
-            background-color: $white;
-            color: $color-tertiary;
-        }
+        opacity: 0;
     }
 }
 
@@ -138,11 +138,10 @@
 
 @keyframes appear { 
     from{   
-        transform: translateY(50px); 
+        transform: translateY(20px); 
         opacity:0 
     } 
     to{ 
-        transform: translateY(0); 
         opacity:1 
     }
 }
@@ -150,11 +149,35 @@
 @keyframes select {
     0%{
         transform: translateX(0px);
-        
         opacity: 0;
     }
     100%{ 
-        transform: translateX( -55px);
+        transform: translateX(-60px);
         opacity:1;
+       }
+}
+
+@keyframes turn{
+    0%{
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes reduce {
+    0%{
+    }
+
+    100%{ 
+        max-width:180px;
+       }
+}
+
+@keyframes move {
+    0%{
+    }
+    100%{ 
+        transform: translateX(-20px);
        }
 }

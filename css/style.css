@@ -41,12 +41,22 @@ body {
     width: 100%;
   }
 }
+@media screen and (min-width: 992px) {
+  #container {
+    margin: auto;
+    min-width: 992px;
+    max-width: 1280px;
+  }
+}
 
 #container__restaurant {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   background-color: #EAEAEA;
+  margin: auto;
+  min-width: 992px;
+  max-width: 1280px;
 }
 
 header {
@@ -182,7 +192,7 @@ button:hover {
 
 .pink {
   background: linear-gradient(to left, #9356DC, #FF79DA);
-  -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   opacity: 0;
   font-weight: bold;
@@ -308,24 +318,24 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 #photo {
   width: 100%;
   object-fit: cover;
-  max-height: 500px;
-  z-index: 1;
+  max-height: 400px;
 }
 
 #title {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px;
-  z-index: 2;
+  padding: 20px;
   border-radius: 25px 25px 0 0;
-  background: #EAEAEA;
+  background-color: #EAEAEA;
+  position: relative;
+  top: -45px;
 }
 
 .menu {
@@ -366,7 +376,6 @@ button:hover {
 
 .course {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   background-color: #fff;
   width: 300px;
@@ -374,30 +383,41 @@ button:hover {
   border-radius: 15px;
   padding: 10px;
   animation-name: appear;
-  animation-duration: 3s;
-  animation-timing-function: ease-out;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
   animation-fill-mode: both;
+  overflow: hidden;
 }
 .course:hover {
   cursor: pointer;
 }
-.course:hover > .checked {
+.course:hover > .course__check {
   animation: select 2s forwards;
 }
-.course:hover > .checked .wrap {
-  transition: rotate 2s forwards;
+.course:hover > .course__price {
+  animation: move 1.5s forwards;
 }
-.course__item {
+.course:hover > .course__description {
+  animation: reduce 2s forwards;
+}
+.course:hover .fas {
+  animation: turn 2s forwards;
+}
+.course__description {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   width: 80%;
+  max-width: 300px;
 }
-.course__item__description__title {
+.course__description__title {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   max-width: 100%;
   padding: 2px;
 }
-.course__item__description__text {
+.course__description__text {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -414,24 +434,16 @@ button:hover {
 }
 .course__check {
   background-color: #99E2D0;
-  height: 60px;
-  width: 60px;
+  height: 35px;
+  width: 35px;
   display: flex;
-  opacity: 0;
   justify-content: center;
   align-items: center;
-  margin-right: -65px;
+  color: #fff;
+  padding: 13px 10px;
+  margin-right: -70px;
   margin-top: -10px;
-}
-.course__check__wrap {
-  height: 22px;
-  width: 22px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  color: #99E2D0;
+  opacity: 0;
 }
 
 .course:nth-child(1) {
@@ -461,11 +473,10 @@ button:hover {
 
 @keyframes appear {
   from {
-    transform: translateY(50px);
+    transform: translateY(20px);
     opacity: 0;
   }
   to {
-    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -475,8 +486,23 @@ button:hover {
     opacity: 0;
   }
   100% {
-    transform: translateX(-55px);
+    transform: translateX(-60px);
     opacity: 1;
+  }
+}
+@keyframes turn {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes reduce {
+  100% {
+    max-width: 180px;
+  }
+}
+@keyframes move {
+  100% {
+    transform: translateX(-20px);
   }
 }
 

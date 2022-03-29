@@ -98,6 +98,6 @@
     &__container{
         @include flex;
         gap: 15px;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 }
