@@ -1,62 +1,8 @@
 
-.loader{
-    position: fixed;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background-color: $white;
-    animation: loader 0.5s ease-in-out 2s forwards;
-    &__circle1{
-        width: 250px;
-        height: 250px;
-        border-radius: 50%;
-        padding: 5px;
-        background: linear-gradient($color-primary, $color-secondary, $color-tertiary);
-        animation: spinner 2s infinite;
-        &__circle2{
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            background-color: $white;
-        }
-    }
-}
-
-@keyframes loader{
-    0%{
-        opacity: 1;
-        z-index: 100;
-    }
-    30%{
-        opacity: 1;
-        z-index: 100;
-    }
-    90%{
-        opacity: 0.5;
-        z-index: 100;
-    }
-    100%{
-        opacity: 0;
-        z-index: -1;
-    }
-}
-
-@keyframes spinner{
-    from{
-        transform: rotate(0deg);
-        opacity: 1;
-    }
-    to{
-        transform: rotate(360deg);
-        opcaity: 0;
-    }
-}
 
 .howto{
     padding: 30px 10px;
+    background-color: $white;
     &__container{
         @include flex;
         align-items: center;

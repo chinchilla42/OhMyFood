@@ -3,20 +3,21 @@
     padding: 0px;
 }
 
+html {
+    height:100%;
+}
+
 body{
     margin: 0px;
     font-family: $font-main;
+    height:100%;
 }
-
 
 .container{
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     max-width: 1280px;
     margin: auto;
+    height:100%;
+    background-color: $gray-light;
 }
-.restaurant{
-    background-color: $gray-medium;
-}
-
