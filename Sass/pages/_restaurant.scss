@@ -20,7 +20,6 @@
     gap: 10px;
     margin: 15px;
     justify-content: space-around;
-
     &__item{
         @include flex;
         flex-direction: column;
@@ -29,7 +28,7 @@
             text-transform: uppercase;
             font-size: small;
             padding: 5px;
-            border-color: $colo-hover;
+            border-color: $color-hover;
         }
         &__container{
             @include flex;

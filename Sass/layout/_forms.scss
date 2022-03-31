@@ -3,11 +3,11 @@
     &__search{
         display: flex;
         justify-content: center;
-        background-color: #b5b3b3;
+        background-color: $gray-medium;
         padding: 10px;
     }
     &__text{
-        background-color: #e8e3e3;
+        background-color:$gray-light;
         padding: 35px;
         &__title{
             font-weight: bolder;
@@ -19,6 +19,6 @@
 }
 input{
     border: none;
-    background-color: #b5b3b3;
+    background-color: $gray-medium;
     margin-left: 10px;
 }
